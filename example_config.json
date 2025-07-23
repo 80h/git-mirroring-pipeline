@@ -1,0 +1,9 @@
+[
+  {
+    "name": "example-repo",
+    "source": "git@github.com:source/example.git",
+    "source_credentials_id": "github-ssh-key",
+    "target": "git@gitlab.com:target/example.git",
+    "target_credentials_id": "gitlab-ssh-key"
+  }
+]
