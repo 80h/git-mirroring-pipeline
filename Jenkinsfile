@@ -46,6 +46,7 @@ def mirrorRepo(repo) {
                     export GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=no -i $TARGET_SSH_KEY'
                     git remote set-url --push origin ${repo.target}
                     git fetch -p origin
+                    git for-each-ref --format='delete %(refname)' refs/pull/ refs/pull-requests/ refs/merge-requests/ | git update-ref --stdin
                     git push --mirror
                 """
 
